@@ -1,0 +1,135 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+  // background: v.$blanco;
+  scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  @include m.desktop {
+    cursor: none;
+  }
+  font-size: 16px;
+  background-color: v.$gris !important;
+}
+
+.dark-mode {
+  background-color: #222 !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  a,
+  span {
+    color: v.$gris !important;
+  }
+
+  footer {
+    background-color: #111 !important;
+    color: #fff !important;
+  }
+
+  #toggle {
+    span {
+      background-color: #fff;
+      &::after,
+      &::before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  #menu {
+    background-color: #fff;
+    color: v.$negro !important;
+
+    &::after {
+      border-bottom: 20px solid v.$blanco;
+    }
+
+    a {
+      color: v.$negro !important;
+
+      &:hover {
+        color: v.$blanco !important;
+        background: #cec2df;
+      }
+    }
+  }
+
+  header {
+    div:nth-child(1) {
+      .img-header {
+        box-shadow: -10px 10px 20px 10px rgba(3, 3, 3, 0.404) !important;
+        &:hover {
+          box-shadow: 0px 15px 15px 10px rgba(3, 3, 3, 0.404) !important;
+        }
+      }
+    }
+    div:nth-child(2) {
+      .img-header {
+        box-shadow: 10px 10px 20px 10px rgba(3, 3, 3, 0.404) !important;
+        &:hover {
+          box-shadow: 0px 15px 15px 10px rgba(3, 3, 3, 0.404) !important;
+        }
+      }
+    }
+    button {
+      box-shadow: 10px 12px 20px 2px rgba(0, 0, 0, 0.904) !important;
+    }
+  }
+
+  .section1 {
+    .carousel-wrapper {
+      box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.582);
+      &:hover {
+        box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, 0.555);
+      }
+    }
+  }
+
+  .section3 {
+    div:nth-child(1) {
+      .img-header {
+        box-shadow: -10px 10px 30px 10px rgba(3, 3, 3, 0.404) !important;
+        &:hover {
+          box-shadow: 0px 15px 20px 10px rgba(3, 3, 3, 0.404) !important;
+        }
+      }
+    }
+    div:nth-child(2) {
+      .img-header {
+        box-shadow: 10px 10px 30px 10px rgba(3, 3, 3, 0.404) !important;
+        &:hover {
+          box-shadow: 0px 15px 20px 10px rgba(3, 3, 3, 0.404) !important;
+        }
+      }
+    }
+  }
+
+  #contact {
+    .caja-datos {
+      background: #111;
+      box-shadow: -10px 10px 30px 10px rgba(3, 3, 3, 0.404) !important;
+    }
+  }
+
+  .modal {
+    p {
+      color: v.$negro !important;
+    }
+    span {
+      color: v.$negro !important;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "fotografa",
+  "version": "1.0.0",
+  "description": "fotografa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev",
+    "css": "gulp css"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Flores Agustin",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-cache": "^1.1.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser-js": "^5.2.2",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.56.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "typescript": "^4.8.4"
+  }
+}

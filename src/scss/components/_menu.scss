@@ -1,0 +1,108 @@
+@use "base/variables" as v;
+
+.caja-menu {
+  width: 100%;
+  position: fixed;
+  z-index: 80;
+}
+
+/* Important styles */
+#toggle {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  padding: 3rem 0;
+  margin: 0 auto;
+  cursor: none;
+}
+
+#toggle span:after,
+#toggle span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -15px;
+}
+#toggle span:after {
+  top: 15px;
+}
+#toggle span {
+  position: relative;
+  display: block;
+}
+
+#toggle span,
+#toggle span:after,
+#toggle span:before {
+  width: 100%;
+  height: 5px;
+  background-color: v.$negro;
+  transition: all 0.3s;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+/* on activation */
+#toggle.on span {
+  background-color: transparent;
+}
+#toggle.on span:before {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+#toggle.on span:after {
+  transform: rotate(-45deg) translate(15px, -15px);
+}
+#toggle.on + #menu {
+  display: block;
+  visibility: visible;
+}
+
+/* menu appearance*/
+#menu {
+  position: relative;
+  color: v.$blanco;
+  width: 200px;
+  padding: 10px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans",
+    "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif;
+  text-align: center;
+  border-radius: 4px;
+  background: v.$negro;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05);
+  /* just for this demo */
+  display: none;
+  visibility: hidden;
+  transition: opacity 0.4s;
+}
+#menu:after {
+  position: absolute;
+  top: -15px;
+  left: 85px;
+  content: "";
+  display: block;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid v.$negro;
+}
+ul,
+li,
+li a {
+  list-style: none;
+  display: block;
+  margin: 0 !important;
+  padding: 1rem 0 !important;
+}
+li a {
+  padding: 5px;
+  color: v.$blanco;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: none;
+  transition: all 0.2s;
+}
+li a:hover,
+li a:focus {
+  background: #222;
+  color: #fff;
+}
