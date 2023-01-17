@@ -132,4 +132,12 @@ body {
       color: v.$negro !important;
     }
   }
+
+  .toggle {
+    background-color: #fff !important;
+    &::before,
+    &::after {
+      background-color: #333;
+    }
+  }
 }

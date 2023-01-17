@@ -101,6 +101,12 @@ body {
 .dark-mode .modal span {
   color: #333 !important;
 }
+.dark-mode .toggle {
+  background-color: #fff !important;
+}
+.dark-mode .toggle::before, .dark-mode .toggle::after {
+  background-color: #333;
+}
 
 header {
   padding-top: 8rem;
@@ -1344,4 +1350,97 @@ li a:hover,
 li a:focus {
   background: #222;
   color: #fff;
+}
+
+.toggle:before,
+.toggle:after {
+  background: hsl(0deg, 0%, 90%);
+}
+
+.toggle {
+  position: relative;
+  top: 5rem;
+  left: 5.5rem;
+}
+
+.sr,
+.toggle:before,
+.toggle:after {
+  position: absolute;
+}
+
+.toggle:before,
+.toggle:after {
+  transition: transform 0.3s;
+}
+
+.toggle:before,
+.toggle:checked:after {
+  transition-timing-function: ease-out;
+}
+
+.sr {
+  top: 0;
+  left: 0;
+}
+
+.sr,
+.toggle {
+  overflow: hidden;
+}
+
+.sr {
+  clip: rect(1px, 1px, 1px, 1px);
+  color: transparent;
+  width: 1px;
+  height: 1px;
+}
+
+.toggle {
+  background: currentColor;
+  border-radius: 1.3rem;
+  cursor: pointer;
+  width: 5rem !important;
+  height: 2.5rem !important;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle:before,
+.toggle:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  top: 0.5rem;
+  left: 0.25em;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.toggle:before,
+.toggle:checked:after {
+  transition-delay: 0s;
+}
+
+.toggle:checked:before,
+.toggle:after {
+  transition-delay: 0.3s;
+  transition-timing-function: cubic-bezier(0.3, 1.6, 0.5, 0.7);
+}
+
+.toggle:before {
+  transform: translateX(-2em);
+}
+
+.toggle:checked:before {
+  transform: translateX(3em);
+}
+
+.toggle:checked:after {
+  transform: translateX(6em);
+}
+
+.toggle:focus {
+  outline: transparent;
 }
