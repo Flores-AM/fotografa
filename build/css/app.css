@@ -176,6 +176,7 @@ header div:nth-child(1) .img-header {
   transform: skew(5deg);
   box-shadow: -10px 10px 10px 0px rgba(46, 61, 73, 0.2);
   transition: 0.5s;
+  animation: opa 4s;
 }
 @media (min-width: 768px) {
   header div:nth-child(1) .img-header {
@@ -224,6 +225,7 @@ header div:nth-child(2) .img-header {
   margin-bottom: 5rem;
   box-shadow: 10px 10px 10px 0px rgba(46, 61, 73, 0.2);
   transition: 0.5s;
+  animation: opa 4s;
 }
 @media (min-width: 768px) {
   header div:nth-child(2) .img-header {
@@ -344,6 +346,17 @@ header .cursor {
   }
   100% {
     transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+@keyframes opa {
+  0% {
+    filter: opacity(0);
+  }
+  30% {
+    filter: opacity(0);
+  }
+  100% {
+    filter: opacity(1);
   }
 }
 .section1 {
@@ -1239,7 +1252,7 @@ header .cursor {
 
 .caja-menu {
   width: 100%;
-  position: fixed;
+  position: fixed !important;
   z-index: 80;
 }
 
