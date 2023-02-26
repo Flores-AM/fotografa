@@ -1,9 +1,9 @@
 @use "base/variables" as v;
 
 .caja-menu {
-  width: 100%;
-  position: fixed !important;
-  z-index: 80;
+  width: 100% !important;
+  position: fixed;
+  z-index: 100;
 }
 
 /* Important styles */
