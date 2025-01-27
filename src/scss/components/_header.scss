@@ -1,7 +1,7 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 
-header {
+#header {
   @include m.desktop {
     flex-direction: row;
     height: 100vh;

@@ -60,6 +60,10 @@ body {
     a {
       color: v.$negro !important;
 
+      &.active {
+        background: #cec2df;
+      }
+
       &:hover {
         color: v.$blanco !important;
         background: #cec2df;
@@ -67,7 +71,7 @@ body {
     }
   }
 
-  header {
+  #header {
     div:nth-child(1) {
       .img-header {
         box-shadow: -10px 10px 20px 10px rgba(3, 3, 3, 0.404) !important;

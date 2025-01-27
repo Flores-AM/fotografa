@@ -9,49 +9,33 @@ document.addEventListener("mousemove", (e) => {
 });
 
 // menu
+let toggle = document.getElementById('toggle');
+let menu = document.getElementById('menu');
 
-var theToggle = document.getElementById("toggle");
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('active');
+  menu.classList.toggle('active');
+})
 
-// based on Todd Motto functions
-// https://toddmotto.com/labs/reusable-js/
-
-// hasClass
-function hasClass(elem, className) {
-  return new RegExp(" " + className + " ").test(" " + elem.className + " ");
-}
-// addClass
-function addClass(elem, className) {
-  if (!hasClass(elem, className)) {
-    elem.className += " " + className;
-  }
-}
-// removeClass
-function removeClass(elem, className) {
-  var newClass = " " + elem.className.replace(/[\t\r\n]/g, " ") + " ";
-  if (hasClass(elem, className)) {
-    while (newClass.indexOf(" " + className + " ") >= 0) {
-      newClass = newClass.replace(" " + className + " ", " ");
-    }
-    elem.className = newClass.replace(/^\s+|\s+$/g, "");
-  }
-}
-// toggleClass
-function toggleClass(elem, className) {
-  var newClass = " " + elem.className.replace(/[\t\r\n]/g, " ") + " ";
-  if (hasClass(elem, className)) {
-    while (newClass.indexOf(" " + className + " ") >= 0) {
-      newClass = newClass.replace(" " + className + " ", " ");
-    }
-    elem.className = newClass.replace(/^\s+|\s+$/g, "");
-  } else {
-    elem.className += " " + className;
-  }
-}
-
-theToggle.onclick = function () {
-  toggleClass(this, "on");
-  return false;
+//Nav scroll selector
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header div ul li a');
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header div ul li a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
 };
+
+console.log(window);
 
 // Contacto - Form
 

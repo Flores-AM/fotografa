@@ -1,4 +1,5 @@
 @use "base/variables" as v;
+@use "base/mixins" as m;
 
 .caja-menu {
   width: 100% !important;
@@ -14,6 +15,27 @@
   padding: 3rem 0;
   margin: 0 auto;
   cursor: none;
+
+  @include m.tablet {
+    position: absolute;
+    right: 8.5rem;
+  }
+
+  &.active {
+    span {
+      background-color: transparent;
+    }
+    span:before {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    span:after {
+      transform: rotate(-45deg) translate(15px, -15px);
+    }
+    + #menu {
+      display: block;
+      visibility: visible;
+    }
+  }
 }
 
 #toggle span:after,
@@ -42,21 +64,6 @@
   border-radius: 2px;
 }
 
-/* on activation */
-#toggle.on span {
-  background-color: transparent;
-}
-#toggle.on span:before {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-#toggle.on span:after {
-  transform: rotate(-45deg) translate(15px, -15px);
-}
-#toggle.on + #menu {
-  display: block;
-  visibility: visible;
-}
-
 /* menu appearance*/
 #menu {
   position: relative;
@@ -74,6 +81,12 @@
   display: none;
   visibility: hidden;
   transition: opacity 0.4s;
+
+  @include m.tablet {
+    position: absolute;
+    top: 9rem;
+    right: 1rem;
+  }
 }
 #menu:after {
   position: absolute;
@@ -93,13 +106,18 @@ li a {
   margin: 0 !important;
   padding: 1rem 0 !important;
 }
-li a {
+
+#menu ul li a {
   padding: 5px;
   color: v.$blanco;
   font-size: 2rem;
   text-decoration: none;
   cursor: none;
   transition: all 0.2s;
+
+  &.active {
+    background: #222;
+  }
 }
 li a:hover,
 li a:focus {

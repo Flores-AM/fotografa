@@ -19,22 +19,22 @@
     <title>Tourist Photographer</title>
   </head>
   <body>
-    <div class="caja-menu">
+    <header class="caja-menu">
 
       <input id="dark-mode" class="toggle dark-mode-boton" type="checkbox" name="Dark mode" role="switch" value="on">
 
-      <a href="#menu" id="toggle"><span></span></a>
+      <a class="active" id="toggle"><span></span></a>
   
-  <div id="menu">
-    <ul>
-      <li class="link"><a href="#header">Home</a></li>
-      <li class="link"><a href="#section1">About</a></li>
-      <li class="link"><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-    </div>
+      <div class="active" id="menu">
+        <ul>
+          <li class="link"><a href="#header" class="active">Home</a></li>
+          <li class="link"><a href="#section1">About</a></li>
+          <li class="link"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-    <header id="header">
+    <section id="header">
       <div>
         <p data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-sine">Emma</p>
         <p data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine" data-aos-delay="100">Levanna</p>
@@ -50,7 +50,7 @@
         </button>
       </div>
       <div class="cursor"></div>
-    </header>
+    </section>
 
     <section class="section1" id="section1">
       <div class="sobremi">
@@ -76,25 +76,8 @@
     </div>
     </section>
 
-    <section class="section2">
+    <div class="section2">
       <h2 data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in-sine">The Winter Exhibit</h2>
-      <!-- <div>
-        <div class="card1">
-          <div></div>
-          <p>"Icy Happiness"</p>
-          <p>A winter scene captured at high noon</p>
-        </div>
-        <div class="card2">
-          <div></div>
-          <p>"White Loneliness"</p>
-          <p>Vast emptiness blanketed by snow</p>
-        </div>
-        <div class="card3">
-          <div></div>
-          <p>"Chilly Night"</p>
-          <p>Nighttime scenes of a busy marketplace</p>
-        </div>
-      </div> -->
       <div class="container6" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine">
         <div class="card">
           <img src="./build/img/nieve1.jpg" />
@@ -117,10 +100,9 @@
           <div class="card__head">Ottawa - Canadá</div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section3">
-      <!-- <h3>The Summer Exhibit</h3> -->
+    <div class="section3">
       <div data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in-sine" data-aos-offset="100">
         <div class="img-header"></div>
         <p>The Warm</p>
@@ -131,23 +113,7 @@
         <p>Autumn</p>
         <div class="img-header"></div>
       </div>
-      <!-- <div class="caja">
-        <div class="img2">
-          <img src="./build/img/playa5.jpg" alt="" />
-          <div class="subtitulo">Aviador - Costa Rica</div>
-        </div>
-        <div>
-          <div class="img1">
-            <img src="./build/img/playa3.jpg" alt="" />
-            <div class="subtitulo">Cosumel - Mexico</div>
-          </div>
-          <div class="img3">
-            <img src="./build/img/playa4.jpg" alt="" />
-            <div class="subtitulo">Bodrum - Turquia</div>
-          </div>
-        </div>
-      </div> -->
-    </section>
+    </div>
 
     <section id="contact">
       <div class="caja-datos">
