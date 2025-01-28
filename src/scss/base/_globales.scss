@@ -20,6 +20,8 @@ body {
   }
   font-size: 16px;
   background-color: v.$gris !important;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .dark-mode {

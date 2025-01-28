@@ -9,16 +9,21 @@
 
 /* Important styles */
 #toggle {
+  position: absolute;
   display: block;
-  width: 5rem;
-  height: 5rem;
+  top: 2.5rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
   padding: 3rem 0;
   margin: 0 auto;
   cursor: none;
 
   @include m.tablet {
-    position: absolute;
-    right: 8.5rem;
+    top: 3rem;
+    right: 9rem;
+    height: 1rem;
+    width: 4rem;
   }
 
   &.active {
@@ -26,10 +31,10 @@
       background-color: transparent;
     }
     span:before {
-      transform: rotate(45deg) translate(6px, 6px);
+      transform: rotate(45deg) translate(5px, 5px);
     }
     span:after {
-      transform: rotate(-45deg) translate(15px, -15px);
+      transform: rotate(-45deg) translate(10px, -10px);
     }
     + #menu {
       display: block;
@@ -43,10 +48,10 @@
   content: "";
   position: absolute;
   left: 0;
-  top: -15px;
+  top: -10px;
 }
 #toggle span:after {
-  top: 15px;
+  top: 10px;
 }
 #toggle span {
   position: relative;
@@ -57,7 +62,7 @@
 #toggle span:after,
 #toggle span:before {
   width: 100%;
-  height: 5px;
+  height: 3px;
   background-color: v.$negro;
   transition: all 0.3s;
   backface-visibility: hidden;
@@ -66,9 +71,11 @@
 
 /* menu appearance*/
 #menu {
-  position: relative;
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
   color: v.$blanco;
-  width: 200px;
+  width: fit-content;
   padding: 10px;
   margin: 0 auto;
   font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans",
@@ -80,23 +87,32 @@
   /* just for this demo */
   display: none;
   visibility: hidden;
-  transition: opacity 0.4s;
+  transition: all 0.4s;
 
   @include m.tablet {
-    position: absolute;
     top: 9rem;
     right: 1rem;
+    width: 200px;
   }
 }
 #menu:after {
   position: absolute;
-  top: -15px;
-  left: 85px;
+  top: 2.3rem;
+  right: -2rem;
   content: "";
   display: block;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
   border-bottom: 20px solid v.$negro;
+  transform: rotate(90deg);
+  transition: all 0.4s;
+
+  @include m.tablet {
+    top: -15px;
+    left: 85px;
+    right: auto;
+    transform: rotate(0deg);
+  }
 }
 ul,
 li,
@@ -104,19 +120,36 @@ li a {
   list-style: none;
   display: block;
   margin: 0 !important;
-  padding: 1rem 0 !important;
+  padding: .2rem 0 !important;
+
+  @include m.tablet {
+    padding: 1rem 0 !important;
+  }
+}
+
+#menu ul {
+  display: flex;
+  gap: 1rem;
+
+  @include m.tablet {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 #menu ul li a {
-  padding: 5px;
+  padding: .5rem 1rem !important;
   color: v.$blanco;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
+  text-align: center;
   cursor: none;
-  transition: all 0.2s;
+  border-radius: .8rem;
+  transition: all 0.3s;
 
   &.active {
     background: #222;
+    transition: all 0.3s;
   }
 }
 li a:hover,
@@ -133,9 +166,14 @@ li a:focus {
 }
 .toggle {
   position: relative;
-  top: 5rem;
-  left: 5.5rem;
+  top: 4.5rem;
+  left: 2rem;
   cursor: none !important;
+
+  @include m.tablet {
+    top: 5rem;
+    left: 5.5rem;
+  }
 }
 .sr,
 .toggle:before,
