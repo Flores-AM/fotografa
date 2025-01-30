@@ -1,0 +1,132 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.img-loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+  }
+  
+  .hero {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    // padding: 3em;
+    z-index: 110;
+  }
+  
+  .pre-loader {
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5em;
+    background-color: #0c0c0c;
+    overflow: hidden;
+    // z-index: 2;
+  }
+  
+  .pre-loader p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    place-content: center;
+    padding-bottom: 20rem;
+    width: max-content;
+    color: #ccc;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100;
+    font-size: 60px;
+    letter-spacing: 10px;
+    // line-height: 60px;
+  }
+  
+  .counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    place-content: center;
+    height: 100px;
+    display: flex;
+    color: #ccc;
+    font-size: 90px;
+    font-weight: 400;
+    line-height: 150px;
+    clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+    // margin-bottom: 10px;
+  }
+  
+  .digit-1,
+  .digit-2,
+  .digit-3,
+  .digit-4 {
+    position: relative;
+    top: -15px;
+  }
+  
+  .offset {
+    position: relative;
+    right: -7.5px;
+  }
+  
+  .progress-bar {
+    position: relative;
+    top: 1rem;
+    width: 0%;
+    height: 2px;
+    opacity: 1;
+    background: #ccc !important;
+  }
+  
+  .hero-imgs {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: none;
+    z-index: 0;
+  }
+
+  @media (max-width: 900px) {
+    .pre-loader {
+      padding: 1em;
+      gap: 0.5em;
+    }
+  
+    .counter {
+      font-size: 50px;
+      font-weight: 200;
+    }
+  
+    .pre-loader p {
+      padding-bottom: 15rem;
+      font-size: 30px;
+      line-height: 64px;
+    }
+
+    .progress-bar {
+        height: 1px;
+    }
+  
+    .offset {
+      position: relative;
+      right: -5px;
+    }
+  }
+  
