@@ -25,7 +25,7 @@ body {
 }
 
 .dark-mode {
-  background-color: #222 !important;
+  background-color: #141414 !important;
   h1,
   h2,
   h3,
@@ -34,6 +34,14 @@ body {
   a,
   span {
     color: v.$gris !important;
+  }
+
+  .counter {
+    color: #fff;
+  }
+
+  .progress-bar {
+    background: #fff !important;
   }
 
   footer {

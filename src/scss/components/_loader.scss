@@ -9,14 +9,15 @@
     object-fit: cover;
     object-position: center;
     filter: grayscale(100%);
+    filter: saturate(0);
   }
   
   .hero {
-    position: fixed;
+    // position: absolute;
     width: 100vw;
     height: 100vh;
-    // padding: 3em;
-    z-index: 110;
+    padding: 3em;
+    // z-index: 110;
   }
   
   .pre-loader {
@@ -30,7 +31,7 @@
     justify-content: end;
     align-items: center;
     gap: 0.5em;
-    background-color: #0c0c0c;
+    // background-color: v.$gris;
     overflow: hidden;
     // z-index: 2;
   }
@@ -45,7 +46,7 @@
     place-content: center;
     padding-bottom: 20rem;
     width: max-content;
-    color: #ccc;
+    color: #111;
     text-transform: uppercase;
     text-align: center;
     font-weight: 100;
@@ -64,7 +65,7 @@
     place-content: center;
     height: 100px;
     display: flex;
-    color: #ccc;
+    color: #111;
     font-size: 90px;
     font-weight: 400;
     line-height: 150px;
@@ -91,7 +92,7 @@
     width: 0%;
     height: 2px;
     opacity: 1;
-    background: #ccc !important;
+    background: #111 !important;
   }
   
   .hero-imgs {
@@ -101,6 +102,108 @@
     overflow: hidden;
     border: none;
     z-index: 0;
+  }
+
+  #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    overflow: hidden;
+
+    @include m.tablet {
+      width: 60%;
+    }
+
+    @include m.desktop {
+      width: 45%;
+    }
+
+    .titulo {
+      width: 100%;
+
+      h1 {
+        text-transform: uppercase;
+        text-align: end;
+        letter-spacing: .5rem;
+        font-size: 6rem;
+        font-weight: 600;
+        color: #f0f0f0;
+        mix-blend-mode: difference;
+        text-shadow: 1px 1px 2px #000;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+        span {
+          position: relative;
+          top: 400px;
+        }
+      }
+    }
+
+    p {
+      width: 100%;
+      text-align: end;
+      font-size: 2rem;
+      font-weight: 100;
+      color: #f0f0f0;
+      mix-blend-mode: difference;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    button {
+      margin-top: 5rem;
+      position: relative;
+      outline: none;
+      text-decoration: none;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: none;
+      text-transform: uppercase;
+      height: 60px;
+      width: 210px;
+      opacity: 1;
+      background-color: transparent;
+      border: 2px solid v.$blanco;
+      box-shadow: 10px 12px 15px 0px rgba(117, 117, 117, 0.493);
+      a {
+        color: #fff;
+        // mix-blend-mode: difference;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+      }
+      &:hover {
+        animation: rotate 0.7s ease-in-out both;
+        a {
+          animation: storm 0.7s ease-in-out both;
+          animation-delay: 0.06s;
+        }
+      }
+    }
+
+    .cursor {
+      @include m.desktop {
+        opacity: 1;
+      }
+      opacity: 0;
+      position: fixed;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background: v.$blanco;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      mix-blend-mode: difference;
+      z-index: 999;
+    }
   }
 
   @media (max-width: 900px) {
@@ -130,3 +233,38 @@
     }
   }
   
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+    25% {
+      transform: rotate(3deg) translate3d(0, 0, 0);
+    }
+    50% {
+      transform: rotate(-3deg) translate3d(0, 0, 0);
+    }
+    75% {
+      transform: rotate(1deg) translate3d(0, 0, 0);
+    }
+    100% {
+      transform: rotate(0deg) translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }

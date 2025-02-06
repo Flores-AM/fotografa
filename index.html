@@ -20,7 +20,23 @@
   </head>
   <body>
 
-    <section class="hero">
+    <header class="caja-menu">
+
+      <input id="dark-mode" class="toggle dark-mode-boton" type="checkbox" name="Dark mode" role="switch" value="on">
+
+      <a id="toggle"><span></span></a>
+  
+      <div id="menu">
+        <ul>
+          <li class="link"><a href="#header" class="active">Home</a></li>
+          <li class="link"><a href="#section1">About</a></li>
+          <li class="link"><a href="#section2">Works</a></li>
+          <li class="link"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="hero">
       <div class="pre-loader">
         <p>Levanna</p>
 
@@ -66,46 +82,65 @@
         <img class="img-loader" src="src/img/rba3.jpg" alt="" />
         <img class="img-loader" src="src/img/rba4.jpg" alt="" />
         <img class="img-loader" src="src/img/rba5.jpg" alt="" />
-        <img class="img-loader" src="src/img/rba7.jpg" alt="" />
         <img class="img-loader" src="src/img/rba6.jpg" alt="" />
+        <img class="img-loader" src="src/img/rba7.jpg" alt="" />
       </div>
-    </section>
-
-    <header class="caja-menu">
-
-      <input id="dark-mode" class="toggle dark-mode-boton" type="checkbox" name="Dark mode" role="switch" value="on">
-
-      <a id="toggle"><span></span></a>
-  
-      <div id="menu">
-        <ul>
-          <li class="link"><a href="#header" class="active">Home</a></li>
-          <li class="link"><a href="#section1">About</a></li>
-          <li class="link"><a href="#section2">Works</a></li>
-          <li class="link"><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </header>
+    </div>
 
     <section id="header">
+      <div class="titulo">
+        <h1>Emma Levanna</h1>
+      </div>
+
+      <p>Landscape & Travel Photographer</p>
+
+      <!-- <button class="btn-form">
+        <a>Book a Call</a>
+      </button> -->
+
+      <div class="cursor"></div>
+    </section>
+
+    <!-- <section id="header">
       <div>
-        <p data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-sine">Emma</p>
-        <p data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-sine" data-aos-delay="100">Levanna</p>
+        <p>Emma</p>
+        <p>Levanna</p>
 
         <div class="img-header"></div>
       </div>
       <div>
         <div class="img-header"></div>
-        <p data-aos="fade-right" data-aos-duration="2500">Landscape & Travel</p>
-        <p data-aos="fade-up" data-aos-duration="2500">Photographer</p>
-        <button class="btn-form" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="100">
+        <p>Landscape & Travel</p>
+        <p>Photographer</p>
+        <button class="btn-form">
           <a>Book a Call</a>
         </button>
       </div>
       <div class="cursor"></div>
-    </section>
+    </section> -->
 
     <section class="section1" id="section1">
+      <div class="me me-1">
+        <div>
+          <img class="img-me img-me1" src="./build/img/seccion2-1.jpg" alt="">
+        </div>
+
+        <h2>Hi, its me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil fugit qui itaque laborum illo sint cum veniam natus eligendi?</p>
+      </div>
+
+      <div class="me me-2">
+        <div>
+          <img class="img-me img-me2" src="./build/img/seccion2-2.jpg" alt="">
+        </div>
+
+        <div>
+          <img class="img-me img-me3" src="./build/img/seccion2-3.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section1" id="section1">
       <div class="sobremi">
         <h1 data-aos="zoom-in-up" data-aos-duration="800" data-aos-easing="ease-in-sine">Hi, it's Levanna.</h1>
         <p data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in-sine">
@@ -127,7 +162,7 @@
         </div>
       </div>
     </div>
-    </section>
+    </section> -->
 
     <section class="section2" id="section2">
       <h2 data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in-sine">The Winter Exhibit</h2>
@@ -237,8 +272,12 @@
       </form>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="./build/js/funciones.js"></script>
+    <script src="./build/js/about.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

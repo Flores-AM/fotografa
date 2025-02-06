@@ -40,7 +40,7 @@ console.log(window);
 // Contacto - Form
 
 const btnAbrirForm = document.querySelector(".form");
-const contactHeader = document.querySelector(".btn-form");
+// const contactHeader = document.querySelector(".btn-form");
 const cerrarModal = document.querySelector(".cerrarModal");
 const modal = document.querySelector(".modal");
 
@@ -48,10 +48,10 @@ btnAbrirForm.addEventListener("click", (e) => {
   e.preventDefault();
   modal.classList.add("modal-show");
 });
-contactHeader.addEventListener("click", (e) => {
-  e.preventDefault();
-  modal.classList.add("modal-show");
-});
+// contactHeader.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   modal.classList.add("modal-show");
+// });
 cerrarModal.addEventListener("click", (e) => {
   e.preventDefault();
   modal.classList.remove("modal-show");
@@ -94,6 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
     overflow: "hidden",
   });
 
+  gsap.set("#toggle", { y: -150});
+  gsap.set("#dark-mode", { y: -150});
+  gsap.set("#header p", { x: 400});
+
   const digit1 = document.querySelector(".digit-1");
   const digit2 = document.querySelector(".digit-2");
   const digit3 = document.querySelector(".digit-3");
@@ -110,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // splitTextIntoSpans(".header h1");
+  splitTextIntoSpans(".titulo h1");
 
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 10; j++) {
@@ -171,21 +175,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   gsap.to(".hero", {
-    scale: 1.1,
+    scale: 1.3,
     duration: 3,
     ease: "power3.inOut",
     delay: 9,
     onComplete: () => {
-      gsap.to(".hero-imgs > img", {
-        width: "0%",
-        duration: 1,
-        ease: "power4.inOut",
+      // gsap.to(".hero-imgs > img", {
+      //   width: "0%",
+      //   duration: 1,
+      //   ease: "power4.inOut",
 
-        onComplete: () => {
-          gsap.set(".hero", {
-            display: "none",
-          });
-        },
+      //   onComplete: () => {
+      //     gsap.set(".hero", {
+      //       display: "none",
+      //     });
+      //   },
+      // });
+
+      gsap.to(".hero", {
+        scale: 1,
+        duration: 1,
+        ease: "power3.inOut",
       });
 
       gsap.to("body", {
@@ -194,18 +204,32 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // gsap.to("nav", {
-  //   y: 0,
-  //   duration: 1,
-  //   ease: "power3.out",
-  //   delay: 11,
-  // });
+  gsap.to("#toggle", {
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    delay: 11,
+  });
 
-  // gsap.to("h1 span", {
-  //   top: "0px",
-  //   stagger: 0.1,
-  //   duration: 1,
-  //   ease: "power3.out",
-  //   delay: 11,
-  // });
+  gsap.to("#dark-mode", {
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    delay: 11,
+  });
+
+  gsap.to(".titulo h1 span", {
+    top: "0px",
+    stagger: 0.1,
+    duration: 1,
+    ease: "power3.out",
+    delay: 11,
+  });
+
+  gsap.to("#header p", {
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    delay: 12,
+  });
 });
