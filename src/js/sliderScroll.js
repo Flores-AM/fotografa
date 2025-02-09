@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     ScrollTrigger.create({
       trigger: stickySection,
-      // ease: "power3.out",
       start: "top top",
       end: `+=${stickyHeight}px`,
       pin: true,
@@ -36,15 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let scale, offsetX;
     if (distanceFromCenter > 0) {
-      scale = Math.min(1.1, 1 + distanceFromCenter / window.innerWidth);
-      offsetX = (scale - 1) * 500;
-    } else {
-      scale = Math.max(
-        0.7,
-        1 - Math.abs(distanceFromCenter) / window.innerWidth
-      );
-      offsetX = 0;
+      scale = Math.min(1, 1 - distanceFromCenter / window.innerWidth);
+      offsetX = (scale - 1) * 200;
     }
+    //  else {
+    //   scale = Math.max(
+    //     0.7,
+    //     1 - Math.abs(distanceFromCenter) / window.innerWidth
+    //   );
+    //   offsetX = 0;
+    // }
       
     gsap.set(slide, { scale: scale, x: offsetX });
   });
