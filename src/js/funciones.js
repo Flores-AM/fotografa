@@ -37,31 +37,6 @@ window.onscroll = () => {
 
 console.log(window);
 
-// Contacto - Form
-
-const btnAbrirForm = document.querySelector(".form");
-// const contactHeader = document.querySelector(".btn-form");
-const cerrarModal = document.querySelector(".cerrarModal");
-const modal = document.querySelector(".modal");
-
-btnAbrirForm.addEventListener("click", (e) => {
-  e.preventDefault();
-  modal.classList.add("modal-show");
-});
-// contactHeader.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   modal.classList.add("modal-show");
-// });
-cerrarModal.addEventListener("click", (e) => {
-  e.preventDefault();
-  modal.classList.remove("modal-show");
-});
-
-const enviar = document.querySelector(".enviar");
-enviar.addEventListener("click", (e) => {
-  e.preventDefault();
-});
-
 // Dark Mode
 
 function darkMode() {

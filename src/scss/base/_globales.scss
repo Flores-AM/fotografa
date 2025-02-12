@@ -18,6 +18,7 @@ body {
   @include m.desktop {
     cursor: none;
   }
+  // position: relative;
   font-size: 16px;
   background-color: v.$gris !important;
   width: 100vw;
@@ -132,9 +133,9 @@ body {
   }
 
   #contact {
-    .caja-datos {
-      background: #111;
-      box-shadow: -10px 10px 30px 10px rgba(3, 3, 3, 0.404) !important;
+    
+    button {
+      border: .1rem solid v.$blanco;
     }
   }
 
