@@ -64,15 +64,15 @@ const items = [
 const gallery = document.querySelector(".gallery");
 
 const itemPositions = [
-  { top: "-5%", left: "5%" },
+  { top: "5%", left: "5%" },
   { top: "40%", left: "-5%" },
   { top: "25%", left: "20%" },
   { top: "60%", left: "40%" },
-  { top: "70%", left: "10%" },
-  { top: "-10%", left: "65%" },
+  { top: "65%", left: "10%" },
+  { top: "10%", left: "65%" },
   { top: "10%", left: "85%" },
   { top: "40%", left: "60%" },
-  { top: "80%", left: "70%" },
+  { top: "70%", left: "70%" },
   { top: "50%", left: "95%" },
 ];
 
@@ -120,6 +120,7 @@ btnAbrirForm.addEventListener("click", (e) => {
   modal.classList.add("modal-show");
   overlay.classList.add("active");
 });
+
 cerrarModal.addEventListener("click", (e) => {
   e.preventDefault();
   modal.classList.remove("modal-show");

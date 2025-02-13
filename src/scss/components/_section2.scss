@@ -13,7 +13,7 @@
   .sticky {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden !important;
   }
 
   .sticky-header {
@@ -21,11 +21,12 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     will-change: transform;
+    overflow-x: hidden;
 
     h1 {
       font-size: 3rem;
@@ -41,11 +42,12 @@
   .slider-wrapper {
     width: max-content;
     padding: 0 100vw;
-    height: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8rem;
+    // overflow-x: hidden;
 
     .slide {
       display: flex;

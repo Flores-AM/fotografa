@@ -19,13 +19,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden !important;
   // background: rgb(231, 231, 231);
 
   .me {
     flex: 1;
     display: flex;
     width: auto;
+    margin: 0 !important;
 
     img {
       width: max-content;
