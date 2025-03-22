@@ -7,7 +7,7 @@ const items = [
     },
     {
       img: "./build/img/mascota2.jpg",
-      icon: "<i class='ph-bold ph-pinterest-logo'></i>",
+      icon: "<i class='ph ph-pinterest-logo'></i>",
       // link: "#",
       parllaxSpeed: 0.05,
     },
@@ -31,7 +31,7 @@ const items = [
     },
     {
       img: "./build/img/mascota4.jpg",
-      icon: "<i class='ph-bold ph-pinterest-logo'></i>",
+      icon: "<i class='ph ph-pinterest-logo'></i>",
       // link: "#",
       parllaxSpeed: 0.085,
     },
@@ -43,7 +43,7 @@ const items = [
     },
     {
       img: "./build/img/mascota8.jpg",
-      icon: "<i class='ph-bold ph-pinterest-logo'></i>",
+      icon: "<i class='ph ph-pinterest-logo'></i>",
       // link: "#",
       parllaxSpeed: 0.04,
     },

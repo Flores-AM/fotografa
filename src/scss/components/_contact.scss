@@ -89,20 +89,21 @@
 
     @include m.tablet {
       margin: 10px;
-      width: 30px;
-      height: 30px;
+      width: 30px !important;
+      height: 30px !important;
     }
   }
   
   .link a {
     text-decoration: none;
-    color: #fff !important;
+    color: #ffffff !important;
     cursor: none;
   }
   
   i {
     position: relative;
     top: 1.5px;
+    z-index: 1;
   }
 }
 
